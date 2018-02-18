@@ -1,0 +1,14 @@
+uuid: 1ca78acb-d2e0-4070-a560-82a45ba05dd0
+name: 'drupal graphql'
+mail: admin@example.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
