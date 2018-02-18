@@ -1,0 +1,4 @@
+name: drupal-graphql
+recipe: drupal8
+config:
+  webroot: ./web
