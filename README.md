@@ -11,3 +11,8 @@ I will try to cover this topic from a developer point of view of a developer tha
 ## Screencast 01 - Setup and install Drupal together with the GraphQl module for local development
 
 You can find the Screencast here on Youtube: https://www.youtube.com/watch?v=Fx1Gz-BVNx8&t=1s&list=PLkitwIEsz4riIjHgug6IRgz-698TSvKEF&index=1
+
+## Screencast 02 - GraphQl queries
+
+We dive more into understanding queries that are created by the graphql_core module from the Drupal schema and how to use them.
+You can find the Screencast here on Youtube: https://www.youtube.com/watch?v=Q0hTG5ASzx0&list=PLkitwIEsz4riIjHgug6IRgz-698TSvKEF&index=2
