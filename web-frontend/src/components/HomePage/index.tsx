@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { graphql, QueryProps } from 'react-apollo';
 import gql from 'graphql-tag';
+import { Card, Image } from 'semantic-ui-react';
 
 export const ARTICLE_FRAGMENT = gql`
   fragment Article on NodeArticle {
@@ -43,6 +44,17 @@ export const ARTICLE_PROMOTED_QUERY = gql`
 export interface Article {
   entityId: string;
   title: string;
+  body: {
+    processed: string;
+  };
+  fieldTags: {
+    entity: {
+      name: string;
+    };
+  };
+  fieldImage: {
+    url: string;
+  };
 }
 
 export interface ArticleResponse extends QueryProps {
@@ -68,11 +80,23 @@ const HomePage: React.SFC<Props> = ({ promotedArticles }) => {
   }
   const { nodeQuery: { entities: articles } } = promotedArticles;
   return (
-    <div>
+    <Card.Group itemsPerRow={2}>
       {articles.map(article => (
-        <div key={article.entityId}>{article.title}</div>
+        <Card key={article.entityId}>
+          <Image src={article.fieldImage.url} />
+          <Card.Content>
+            <Card.Header>{article.title}</Card.Header>
+            <Card.Description
+              dangerouslySetInnerHTML={{ __html: article.body.processed }}
+            />
+          </Card.Content>
+
+          <Card.Content extra={true}>
+            {article.fieldTags[0].entity.name}
+          </Card.Content>
+        </Card>
       ))}
-    </div>
+    </Card.Group>
   );
 };
 
