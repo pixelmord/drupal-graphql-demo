@@ -21,7 +21,8 @@
   "exclude": [
     "node_modules",
     "build",
-    "scripts",
+    "scripts_drupal",
+    "scripts_drupal",
     "acceptance-tests",
     "webpack",
     "jest",
