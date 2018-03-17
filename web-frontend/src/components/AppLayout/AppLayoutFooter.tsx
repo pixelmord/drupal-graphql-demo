@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Container, Segment } from 'semantic-ui-react';
 
 interface Props {}
-const compname: React.SFC<Props> = () => (
+const AppLayoutFooter: React.SFC<Props> = () => (
   <Segment
     inverted={true}
     vertical={true}
@@ -12,4 +12,4 @@ const compname: React.SFC<Props> = () => (
   </Segment>
 );
 
-export default compname;
+export default AppLayoutFooter;
