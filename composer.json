@@ -1,6 +1,6 @@
 {
-    "name": "drupal-composer/drupal-project",
-    "description": "Project template for Drupal 8 projects with composer",
+    "name": "pixelmord/drupal-graphql-demo",
+    "description": "Drupal 8 GraphQL Demo",
     "type": "project",
     "license": "GPL-2.0-or-later",
     "authors": [
