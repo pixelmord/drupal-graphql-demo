@@ -29,6 +29,7 @@
     "vendor",
     "web",
     "drush",
+    "config_drupal",
     "config",
     "server"
   ]
