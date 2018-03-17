@@ -58,6 +58,8 @@
     "test": "node web-frontend/scripts/test.js --env=jsdom"
   },
   "devDependencies": {
+    "@types/enzyme": "^3.1.9",
+    "@types/enzyme-to-json": "^1.5.1",
     "@types/errorhandler": "^0.0.32",
     "@types/express": "^4.11.1",
     "@types/graphql": "^0.12.5",
@@ -67,11 +69,17 @@
     "@types/node": "^9.4.7",
     "@types/react": "^16.0.40",
     "@types/react-dom": "^16.0.4",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.3",
     "typescript": "^2.7.2"
   },
   "jest": {
     "collectCoverageFrom": ["web-frontend/src/**/*.{js,jsx,ts,tsx}"],
-    "setupFiles": ["<rootDir>/web-frontend/config/polyfills.js"],
+    "setupFiles": [
+      "<rootDir>/web-frontend/config/polyfills.js",
+      "<rootDir>/web-frontend/src/setupTests.ts"
+    ],
     "testMatch": [
       "<rootDir>/web-frontend/src/**/__tests__/**/*.(j|t)s?(x)",
       "<rootDir>/web-frontend/src/**/?(*.)(spec|test).(j|t)s?(x)"
