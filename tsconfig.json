@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
     "outDir": "build/dist",
     "module": "esnext",
     "target": "es5",
@@ -20,18 +21,18 @@
   },
   "exclude": [
     "node_modules",
-    "build",
-    "scripts_drupal",
-    "scripts_drupal",
+    "web-frontend/build",
+    "web-frontend/scripts",
+    "web-frontend/config",
+    "web-frontend/server",
     "acceptance-tests",
     "webpack",
     "jest",
-    "src/setupTests.ts",
+    "web-frontend/src/setupTests.ts",
+    "scripts",
     "vendor",
     "web",
     "drush",
-    "config_drupal",
-    "config",
-    "server"
+    "config"
   ]
 }

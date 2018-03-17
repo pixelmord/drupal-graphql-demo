@@ -42,7 +42,7 @@
     },
     "autoload": {
         "classmap": [
-            "scripts_drupal/composer/ScriptHandler.php"
+            "scripts/composer/ScriptHandler.php"
         ]
     },
     "scripts": {
