@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "apollo": "^0.2.2",
+    "apollo-client-preset": "^1.0.8",
+    "apollo-link": "^1.2.1",
+    "apollo-link-error": "^1.0.7",
     "autoprefixer": "7.1.6",
     "babel-jest": "^22.1.0",
     "babel-loader": "^7.1.2",
@@ -17,7 +21,10 @@
     "file-loader": "0.11.2",
     "fork-ts-checker-webpack-plugin": "^0.2.8",
     "fs-extra": "3.0.1",
+    "graphql": "0.13.0",
+    "graphql-tag": "^2.8.0",
     "html-webpack-plugin": "2.29.0",
+    "isomorphic-fetch": "^2.2.1",
     "jest": "22.1.4",
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.2.0",
@@ -25,6 +32,7 @@
     "promise": "8.0.1",
     "raf": "3.4.0",
     "react": "^16.2.0",
+    "react-apollo": "^2.0.4",
     "react-dev-utils": "4.2.1",
     "react-dom": "^16.2.0",
     "semantic-ui-css": "^2.3.0",
@@ -52,19 +60,18 @@
   "devDependencies": {
     "@types/errorhandler": "^0.0.32",
     "@types/express": "^4.11.1",
+    "@types/graphql": "^0.12.5",
     "@types/jest": "^22.2.0",
+    "@types/lodash": "^4.14.105",
+    "@types/lodash.flowright": "^3.5.3",
     "@types/node": "^9.4.7",
     "@types/react": "^16.0.40",
     "@types/react-dom": "^16.0.4",
     "typescript": "^2.7.2"
   },
   "jest": {
-    "collectCoverageFrom": [
-      "web-frontend/src/**/*.{js,jsx,ts,tsx}"
-    ],
-    "setupFiles": [
-      "<rootDir>/web-frontend/config/polyfills.js"
-    ],
+    "collectCoverageFrom": ["web-frontend/src/**/*.{js,jsx,ts,tsx}"],
+    "setupFiles": ["<rootDir>/web-frontend/config/polyfills.js"],
     "testMatch": [
       "<rootDir>/web-frontend/src/**/__tests__/**/*.(j|t)s?(x)",
       "<rootDir>/web-frontend/src/**/?(*.)(spec|test).(j|t)s?(x)"
@@ -73,9 +80,11 @@
     "testURL": "http://localhost",
     "transform": {
       "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest",
-      "^.+\\.tsx?$": "<rootDir>/web-frontend/config/jest/typescriptTransform.js",
+      "^.+\\.tsx?$":
+        "<rootDir>/web-frontend/config/jest/typescriptTransform.js",
       "^.+\\.css$": "<rootDir>/web-frontend/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|mjs|css|json)$)": "<rootDir>/web-frontend/config/jest/fileTransform.js"
+      "^(?!.*\\.(js|jsx|mjs|css|json)$)":
+        "<rootDir>/web-frontend/config/jest/fileTransform.js"
     },
     "transformIgnorePatterns": [
       "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|ts|tsx)$"
@@ -102,12 +111,8 @@
       }
     }
   },
-  "babel": {
-    "presets": [
-      "react-app"
-    ]
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5"
   }
 }
